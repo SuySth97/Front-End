@@ -1,0 +1,19 @@
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3rem;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 20px;
+    box-shadow: -10px 5px 10px gray;
+    top: 0;
+    transition: top ease .5s;
+}
+.box:hover{
+    top: -50px;
+}

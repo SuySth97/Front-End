@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span{
+    color: cadetblue;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: navajowhite;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-title span{
+    color: yellow;
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header{
+    min-height: 8vh;
+}
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+/*Project Section*/
+#project{
+    background-image: url(./image/business5.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#project::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+#project ul li {
+      display: inline-table;
+      align-items: center;
+      justify-content: center;
+      padding: 35px 12px;
+      margin: 10px auto;
+      text-decoration: none;
+      position: relative;
+      list-style: none;
+}
+#project ul li a{
+    color: yellow;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#project ul li::after{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: blue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+#project ul li:hover::after{
+    width: 100%;
+}
+#project .project{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#project .project-header h1{
+    margin-bottom: 50px;
+}
+#project .all-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#project .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+#project .project-info{
+    padding: 40px;
+    flex-basis: 60%;
+    background-color: cadetblue;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: rgba(39, 44, 121, 0.7);
+    color: aliceblue;
+}
+#project .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#project .project-info h2{
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+#project .project-img{
+    flex-basis: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#project .project-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+}
+#project .project-img img{
+    transition: 0.3s ease transform;
+}
+#project .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+#footer{
+    background-color: cadetblue;
+}
+#footer .footer{
+    flex-direction: column;
+    min-height: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+#footer h2{
+     color: wheat;
+     font-weight: 500;
+     font-size: 1.8rem;
+     letter-spacing: .1rem;
+     margin-top: 1px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item img:hover{
+    filter: grayscale(0);
+}
